@@ -1,6 +1,6 @@
 <?php
 //TODO: Clase de Clientes
-require_once('../config/config.php');
+require_once('config/config.php');
 class Clientes
 {
     //TODO: Implementar los metodos de la clase

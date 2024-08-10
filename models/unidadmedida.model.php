@@ -1,6 +1,6 @@
 <?php
 //TODO: Clase de Unidad de Medida
-require_once('../config/config.php');
+require_once('config/config.php');
 class unidad_medida
 {
     //TODO: Implementar los metodos de la clase

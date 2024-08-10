@@ -8,7 +8,7 @@ if($method == "OPTIONS") {die();}
 
 //TODO: controlador de kardex
 
-require_once('../models/kardex.model.php');
+require_once('models/kardex.model.php');
 //error_reporting(0);
 $kardex = new Kardex;
 switch ($_GET["op"]) {
@@ -68,7 +68,7 @@ switch ($_GET["op"]) {
         $Productos_idProductos = $_POST["Productos_idProductos"];
         $Tipo_Transaccion= $_POST["Tipo_Transaccion"];
         $datos = array();
-        $datos = $kardex->actualizar($Estado, $Fecha_Transaccion, $Cantidad, $Valor_Compra, $Valor_Venta, $Unidad_Medida_idUnidad_Medida, $Unidad_Medida_idUnidad_Medida1, $Unidad_Medida_idUnidad_Medida2,$Valor_Ganacia,$IVA,$IVA_idIVA, $Proveedores_idProveedores,$Productos_idProductos,$Tipo_Transaccion);
+        $datos = $kardex->actualizar ($idKardex, $Estado, $Fecha_Transaccion, $Cantidad, $Valor_Compra, $Valor_Venta, $Unidad_Medida_idUnidad_Medida, $Unidad_Medida_idUnidad_Medida1, $Unidad_Medida_idUnidad_Medida2, $Valor_Ganacia, $IVA, $IVA_idIVA, $Proveedores_idProveedores, $Productos_idProductos, $Tipo_Transaccion );
         echo json_encode($datos);
         break;
         //TODO: Procedimeinto para eliminar un proveedor en la base de datos

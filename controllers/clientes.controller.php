@@ -8,7 +8,7 @@ if($method == "OPTIONS") {die();}
 
 //TODO: controlador de clientes
 
-require_once('../models/clientes.model.php');
+require_once('models/clientes.model.php');
 //error_reporting(0);
 $clientes = new Clientes;
 switch ($_GET["op"]) {

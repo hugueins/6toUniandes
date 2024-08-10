@@ -1,6 +1,6 @@
 <?php
 //TODO: Clase de productos
-require_once('../config/config.php');
+require_once('config/config.php');
 class Productos
 {
     //TODO: Implementar los metodos de la clase
@@ -30,7 +30,7 @@ class Productos
         try {
             $con = new ClaseConectar();
             $con = $con->ProcedimientoParaConectar();
-            $cadena = "INSERT INTO `productos` ( `Codigo_Barras`, `Nombre_Producto`, `Graba_IVA`, `Contacto_Empresa`, `Teleofno_Contacto`) VALUES ('$Codigo_Barras','$Nombre_Producto',$Graba_IVA,'$Contacto_Empresa','$Teleofno_Contacto')";
+            $cadena = "INSERT INTO `productos` ( `Codigo_Barras`, `Nombre_Producto`, `Graba_IVA`) VALUES ('$Codigo_Barras','$Nombre_Producto',$Graba_IVA)";
             if (mysqli_query($con, $cadena)) {
                 return $con->insert_id;
             } else {

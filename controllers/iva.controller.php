@@ -8,7 +8,7 @@ if($method == "OPTIONS") {die();}
 
 //TODO: controlador de iva
 
-require_once('../models/iva.model.php');
+require_once('models/iva.model.php');
 //error_reporting(0);
 $iva = new iva;
 switch ($_GET["op"]) {

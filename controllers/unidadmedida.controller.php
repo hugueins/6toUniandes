@@ -8,7 +8,7 @@ if($method == "OPTIONS") {die();}
 
 //TODO: controlador de proveedores
 
-require_once('../models/unidadmedida.model.php');
+require_once('models/unidadmedida.model.php');
 //error_reporting(0);
 $unidad_medida= new unidad_medida;
 

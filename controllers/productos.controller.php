@@ -8,7 +8,7 @@ if($method == "OPTIONS") {die();}
 
 //TODO: controlador de productos
 
-require_once('models/productos.model.php');
+require_once('../models/productos.model.php');
 //error_reporting(0);
 $productos = new Productos;
 
@@ -58,4 +58,5 @@ switch ($_GET["op"]) {
         $datos =$productos->eliminar($idProductos);
         echo json_encode($datos);
         break;
+       // 
 }

@@ -1,6 +1,6 @@
 <?php
 //TODO: Clase de productos
-require_once('config/config.php');
+require_once('../config/config.php');
 class Productos
 {
     //TODO: Implementar los metodos de la clase

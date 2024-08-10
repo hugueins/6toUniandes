@@ -8,7 +8,7 @@ if($method == "OPTIONS") {die();}
 
 //TODO: controlador de proveedores
 
-require_once('models/proveedores.model.php');
+require_once('../models/proveedores.model.php');
 //error_reporting(0);
 $proveedores = new Provedores;
 switch ($_GET["op"]) {

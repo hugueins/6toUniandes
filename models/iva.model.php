@@ -1,6 +1,6 @@
 <?php
 //TODO: Clase de iva
-require_once('config/config.php');
+require_once('../config/config.php');
 class iva
 {
     //TODO: Implementar los metodos de la clase

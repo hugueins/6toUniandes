@@ -1,6 +1,6 @@
 <?php
 //TODO: Clase de Kardex
-require_once('config/config.php');
+require_once('../config/config.php');
 class Kardex
 {
     //TODO: Implementar los metodos de la clase

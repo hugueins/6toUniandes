@@ -7,6 +7,7 @@ require_once "controllers/kardex.controller.php";
 require_once "controllers/proveedores.controller.php";
 require_once "controllers/unidadmedida.controller.php"
 
+
 /* if (isset($_GET["c"])){
     $productos = 
 }

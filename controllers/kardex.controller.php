@@ -8,7 +8,7 @@ if($method == "OPTIONS") {die();}
 
 //TODO: controlador de kardex
 
-require_once('models/kardex.model.php');
+require_once('../models/kardex.model.php');
 //error_reporting(0);
 $kardex = new Kardex;
 switch ($_GET["op"]) {

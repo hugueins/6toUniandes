@@ -47,7 +47,8 @@ class unidad_medida
         try {
             $con = new ClaseConectar();
             $con = $con->ProcedimientoParaConectar();
-            $cadena = "UPDATE `unidad_medida` SET `Detalle`='$Detalle',`Tipo`=$Tipo WHERE `idUnidad_Medida` = $idUnidad_Medida";
+            $cadena = "UPDATE `unidad_medida` SET `Detalle`='$Detalle',`Tipo`=$Tipo WHERE `idUnidad_Medida`=$idUnidad_Medida";
+         
             if (mysqli_query($con, $cadena)) {
                 return $idUnidad_Medida;
             } else {
@@ -60,11 +61,12 @@ class unidad_medida
         }
     }
     public function eliminar($idUnidad_Medida) //delete from unidad_medida where id = $id
-    {
+       {
         try {
             $con = new ClaseConectar();
             $con = $con->ProcedimientoParaConectar();
-            $cadena = "DELETE FROM `unidad_medida` WHERE `idUnidad_Medida`= $idUnidad_Medida";
+            $cadena = "DELETE FROM `unidad_medida` WHERE `idUnidad_Medida`=$idUnidad_Medida";
+           // echo $cadena;
             if (mysqli_query($con, $cadena)) {
                 return 1;
             } else {
@@ -77,3 +79,20 @@ class unidad_medida
         }
     }
 }
+/*
+ public function eliminar($idProveedores) //delete from provedores where id = $id
+    {
+        try {
+            $con = new ClaseConectar();
+            $con = $con->ProcedimientoParaConectar();
+            $cadena = "DELETE FROM `proveedores` WHERE `idProveedores`= $idProveedores";
+            if (mysqli_query($con, $cadena)) {
+                return 1;
+            } else {
+                return $con->error;
+            }
+        } catch (Exception $th) {
+            return $th->getMessage();
+        } finally {
+            $con->close();
+*/

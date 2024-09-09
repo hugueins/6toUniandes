@@ -6,8 +6,6 @@ header("Allow: GET, POST, OPTIONS, PUT, DELETE");
 $method = $_SERVER["REQUEST_METHOD"];
 if($method == "OPTIONS") {die();}
 
-//TODO: controlador de proveedores
-
 require_once('../models/proveedores.model.php');
 //error_reporting(0);
 $proveedores = new Provedores;
